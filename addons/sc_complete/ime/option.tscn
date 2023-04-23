@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmahk6pvcgpu4"]
+
+[sub_resource type="GDScript" id="GDScript_wg6tw"]
+script/source = "@tool
+extends HBoxContainer
+
+@onready var index: Label = $Index
+@onready var char: Label = $Char
+
+
+func create(i:int, c:String):
+	index.text = str(i)
+	char.text = c
+
+func set_char(c:String):
+	char.text = c
+"
+
+[node name="Option" type="HBoxContainer"]
+offset_right = 140.0
+offset_bottom = 61.0
+script = SubResource("GDScript_wg6tw")
+
+[node name="Index" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.06
+text = "1."
+
+[node name="Char" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3

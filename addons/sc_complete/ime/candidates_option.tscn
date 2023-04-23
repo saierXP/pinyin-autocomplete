@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ihpg7omlgiu"]
+
+[ext_resource type="Script" path="res://addons/sc_complete/ime/candidates_option.gd" id="1_s4djw"]
+
+[node name="CandidatesOption" type="Control"]
+layout_mode = 3
+anchor_right = 0.11
+anchor_bottom = 0.219
+offset_left = -1.0
+offset_right = -0.720001
+offset_bottom = 0.0879974
+script = ExtResource("1_s4djw")
+res = [null]
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 230.0
+offset_bottom = 214.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/Control"]
+layout_mode = 2
+offset_top = -39.0
+offset_right = 230.0
+offset_bottom = -7.0
+caret_blink = true
+caret_blink_interval = 0.5
